@@ -19,15 +19,15 @@ const authorize = (req) => {
         .end((err, res) => {
        })
 
-    // promise with async/await
-    (async () => {
-        try {
-            const res = await superagent.post('https://api.metadefender.com/v4/file')
-            console.log(res);
-        } catch (err) {
-            console.error(err);
-        }
-
-    })();
+    // // promise with async/await
+    // (async () => {
+    //     try {
+    //         const res = await superagent.post('https://api.metadefender.com/v4/file')
+    //         console.log(res);
+    //     } catch (err) {
+    //         console.error(err);
+    //     }
+    //
+    // })();
 
 }
