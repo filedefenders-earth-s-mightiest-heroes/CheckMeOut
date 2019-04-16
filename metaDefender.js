@@ -1,33 +1,26 @@
 'use strict';
+require('dotenv').config();
 
 const superagent = require('superagent');
+const http = require('https');
+const express = require('express
+const fileRouter = express.Router();
 
-const authorize = (req) => {
 
-    let code = req.query.code;
-    console.log('(1) CODE:', code);
+const app = express();
 
-    return superagent.post('https://api.metadefender.com/v4/file')
-        .type('form')
-        .send({
-            code: code,
-            redirect_uri:`${process.env.API_KEY}`
-        })
 
-    // superagent.post('https://api.metadefender.com/v4/file').then(console.log).catch(console.error);
 
-        .end((err, res) => {
-       })
 
-    // // promise with async/await
-    // (async () => {
-    //     try {
-    //         const res = await superagent.post('https://api.metadefender.com/v4/file')
-    //         console.log(res);
-    //     } catch (err) {
-    //         console.error(err);
-    //     }
-    //
-    // })();
+// Route
+// fileRouter.post('/checkFile', (req, res, next) => {
+//     superagent.post('https://api.metadefender.com/v4/file')
+//     .set('apikey', `${process.env.API_KEY}`)
+//     .set('Content-Type', 'application/octet-stream')
+//         .send()
+//
+// }
 
-}
+fileRouter.post('/',(req,res,next) => {
+    console.log(req);
+})
