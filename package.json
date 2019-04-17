@@ -29,7 +29,7 @@
     "mongoose-schema-jsonschema": "^1.1.15",
     "morgan": "^1.9.1",
     "require-directory": "^2.1.1",
-    "supertest": "^3.3.0",
+    "supertest": "^3.4.2",
     "swagger-ui-express": "^4.0.2"
   }
 }
