@@ -6,7 +6,7 @@ const app = express();
 
 
 fileRouter.post('/', (req, res) => {
-    console.log(req);
+    console.log('------post request made------');
 })
 
 
